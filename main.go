@@ -5,14 +5,14 @@ import (
 
 	"learninterface/analytics"
 	"learninterface/analytics/mock"
-	"learninterface/analytics/segments"
+	"learninterface/analytics/segment"
 )
 
 func main() {
 	var analyticsClient *analytics.Analytics
 
 	if os.Getenv("APP_ENV") == "production" {
-		analyticsClient = analytics.New(segments.New())
+		analyticsClient = analytics.New(segment.New())
 	} else {
 		analyticsClient = analytics.New(mock.New())
 	}

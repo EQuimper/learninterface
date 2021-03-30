@@ -1,4 +1,4 @@
-package segments
+package segment
 
 import "log"
 
